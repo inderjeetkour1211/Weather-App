@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
-import { APIKEY } from "./APIKey";
+const APIKEY = process.env.REACT_APP_APIKEY;
 
 function Weather() {
   const [weather, setWeather] = useState([]);
