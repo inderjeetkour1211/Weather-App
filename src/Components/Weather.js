@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import DisplayWeather from "./DisplayWeather";
 import "./weather.css";
-const APIKEY = process.env.REACT_APP_APIKEY;
+const APIKEY = process.env.REACT_APP_APIKEY
+
 
 function Weather() {
   const [weather, setWeather] = useState([]);
@@ -64,7 +65,7 @@ function Weather() {
           <div>
             <DisplayWeather data={weather.data} />
           </div>
-        ) : null}
+        ) : (<h2>sorry! Data not found.</h2>)}
       </div>
     </div>
   );
